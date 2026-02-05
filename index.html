@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Hand-written meta describing character encoding for proper text rendering -->
+    <meta charset="UTF-8">
+    <!-- Hand-written meta tag ensuring the layout scales on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Hand-written descriptive title that matches the project brief -->
+    <title>Basics of Digital Photography – Home</title>
+    <!-- Single external stylesheet reference to satisfy “single external CSS” requirement -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Global background video layer: sits behind all content -->
+    <div class="bg-video" aria-hidden="true">
+        <video
+            class="bg-video__media"
+            src="C:\Users\sahin\Downloads\Web Design final website\media\background.mp4"
+            autoplay
+            muted
+            loop
+            playsinline
+        ></video>
+    </div>
+
+    <!-- Semantic page wrapper to support screen readers and logical grouping -->
+    <header class="site-header">
+        <!-- Skip link improves keyboard accessibility and WCAG conformance -->
+        <a class="skip-link" href="#main-content">Skip to main content</a>
+
+        <!-- Global navigation bar that will be identical across all pages -->
+        <nav class="main-nav" aria-label="Main site navigation">
+            <!-- Site logo / wordmark; kept as text for simplicity and accessibility -->
+            <a class="brand" href="index.html">Basics of Digital Photography</a>
+
+            <!-- Primary navigation list; links point to each HTML page in the mini-course -->
+            <ul class="nav-links">
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li class="nav-dropdown">
+                    <!-- Parent item that groups the three “Basics” modules -->
+                    <button class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+                        Basics
+                    </button>
+                    <ul class="nav-dropdown-menu">
+                        <li><a href="basics-exposure.html">Exposure</a></li>
+                        <li><a href="basics-focus.html">Focus</a></li>
+                        <li><a href="basics-composition.html">Composition</a></li>
+                    </ul>
+                </li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main landmark to help assistive technologies jump to primary content quickly -->
+    <main id="main-content">
+        <!-- Cinematic hero section with call-to-action, reflecting proposal wireframe -->
+        <section class="hero" aria-labelledby="hero-heading">
+            <div class="hero-inner">
+                <div class="hero-text">
+                    <!-- H1 communicates page topic and matches the educational scope -->
+                    <h1 id="hero-heading">Turn Everyday Shots into Intentional Images</h1>
+                    <p>
+                        Learn the core principles of exposure, focus, and composition through a concise,
+                        self-paced mini-course designed for smartphone and entry-level camera users.
+                    </p>
+                    <!-- CTA button sending users into the Basics learning path -->
+                    <a class="btn primary-btn" href="basics-exposure.html">
+                        Start with Exposure
+                    </a>
+                    <!-- Secondary link supporting users who want an overview first -->
+                    <p class="hero-subtext">
+                        Prefer to browse? Jump to
+                        <a href="basics-focus.html">Focus</a> or
+                        <a href="basics-composition.html">Composition</a>.
+                    </p>
+                </div>
+
+                <!-- Hero supporting image; placeholder path plus comment marker for replacement -->
+                <div class="hero-media">
+                    <!--  IMAGE_PATH -->
+                    <img src="C:\Users\sahin\Downloads\Web Design final website\media\image1.jpg" alt="Shooting a landscape at golden hour">
+                </div>
+            </div>
+        </section>
+
+        <!-- Three-card panel summarizing core modules, matching proposal description -->
+        <section class="module-overview" aria-labelledby="modules-heading">
+            <div class="section-header">
+                <h2 id="modules-heading">Your Three-Step Learning Path</h2>
+                <p>
+                    Each module focuses on one essential building block and ends with a simple
+                    “try it now” exercise you can do with any camera or smartphone.
+                </p>
+            </div>
+
+            <div class="module-grid">
+                <!-- Exposure card -->
+                <article class="module-card">
+                    <!--  IMAGE_PATH -->
+                    <img src="C:\Users\sahin\Downloads\Web Design final website\media\image8.jpg" alt="Diagram of the exposure triangle with aperture, shutter speed, and ISO">
+                    <div class="module-card-body">
+                        <h3>Exposure Basics</h3>
+                        <p>
+                            Discover how aperture, shutter speed, and ISO interact so you can move
+                            beyond automatic mode without fear.
+                        </p>
+                        <a class="text-link" href="basics-exposure.html">
+                            Go to Exposure module
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Focus card -->
+                <article class="module-card">
+                    <!--  IMAGE_PATH -->
+                    <img src="C:\Users\sahin\Downloads\Web Design final website\media\image9.jpg" alt="Portrait showing sharp eyes against a soft background">
+                    <div class="module-card-body">
+                        <h3>Focus &amp; Sharpness</h3>
+                        <p>
+                            Learn autofocus modes, focus points, and simple habits that keep your
+                            subject crisp even in challenging light.
+                        </p>
+                        <a class="text-link" href="basics-focus.html">
+                            Go to Focus module
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Composition card -->
+                <article class="module-card">
+                    <!--  IMAGE_PATH -->
+                    <img src="C:\Users\sahin\Downloads\Web Design final website\media\image10.jpg" alt="Grid overlay showing the rule of thirds on a landscape image">
+                    <div class="module-card-body">
+                        <h3>Composition Fundamentals</h3>
+                        <p>
+                            Use the rule of thirds and leading lines to guide the viewer’s eye and
+                            make your images feel more intentional.
+                        </p>
+                        <a class="text-link" href="basics-composition.html">
+                            Go to Composition module
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Outcome-oriented explanation section grounded in your project objectives -->
+        <section class="learning-outcomes" aria-labelledby="outcomes-heading">
+            <div class="section-header">
+                <h2 id="outcomes-heading">After This Mini‑Course You Will Be Able To</h2>
+            </div>
+
+            <div class="outcome-grid">
+                <article class="outcome-item">
+                    <h3>Choose Simple Settings</h3>
+                    <p>
+                        Decide on basic exposure settings for common scenes such as portraits,
+                        sunsets, and low-light interiors.
+                    </p>
+                </article>
+                <article class="outcome-item">
+                    <h3>Keep Subjects Sharp</h3>
+                    <p>
+                        Select autofocus modes and focus points that keep your main subject
+                        consistently in focus.
+                    </p>
+                </article>
+                <article class="outcome-item">
+                    <h3>Compose with Intention</h3>
+                    <p>
+                        Apply at least one composition technique to every frame so your photos
+                        tell clearer visual stories.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- External resource teaser to meet “external links” and research connection -->
+        <section class="external-preview" aria-labelledby="external-heading">
+            <div class="section-header">
+                <h2 id="external-heading">Want to Go Deeper?</h2>
+                <p>
+                    When you are ready for longer reads and more advanced topics, explore the
+                    full guides and courses below.
+                </p>
+            </div>
+
+            <ul class="external-links-list">
+                <li>
+                    <a href="https://photographylife.com/photography-basics" target="_blank" rel="noopener">
+                        Photography Basics – Photography Life
+                    </a>
+                    <span class="external-note">In‑depth articles expanding on exposure, focus, and composition.</span>
+                </li>
+                <li>
+                    <a href="https://www.australianphotographyschool.com.au/blog/photography-for-beginners-your-first-steps-into-creative-expression/" target="_blank" rel="noopener">
+                        Photography for Beginners – Australian Photography School
+                    </a>
+                    <span class="external-note">A structured beginner path that inspired this mini‑course layout.</span>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer landmark with secondary navigation and attribution -->
+    <footer class="site-footer">
+        <p>&copy; 2025 Basics of Digital Photography – Community Learning by Kisandu Ariyarathne.</p>
+        <p>
+            Built as an educational project focusing on usability, accessibility, and beginner‑friendly learning.
+        </p>
+    </footer>
+
+    <!-- External JavaScript for navigation and scroll micro-interactions -->
+    <script src="script.js"></script>
+</body>
+</html>

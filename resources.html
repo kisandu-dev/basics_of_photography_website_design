@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basics of Digital Photography – Resources</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Global background video layer: sits behind all content -->
+    <div class="bg-video" aria-hidden="true">
+        <video
+            class="bg-video__media"
+            src="C:\Users\sahin\Downloads\Web Design final website\media\background-3.mp4"  
+            autoplay
+            muted
+            loop
+            playsinline
+        ></video>
+    </div>
+
+    <header class="site-header">
+        <a class="skip-link" href="#main-content">Skip to main content</a>
+
+        <nav class="main-nav" aria-label="Main site navigation">
+            <a class="brand" href="index.html">Basics of Digital Photography</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="nav-dropdown">
+                    <button class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+                        Basics
+                    </button>
+                    <ul class="nav-dropdown-menu">
+                        <li><a href="basics-exposure.html">Exposure</a></li>
+                        <li><a href="basics-focus.html">Focus</a></li>
+                        <li><a href="basics-composition.html">Composition</a></li>
+                    </ul>
+                </li>
+                <li><a href="resources.html" aria-current="page">Resources</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="page-header" aria-labelledby="resources-heading">
+            <h1 id="resources-heading">Further Learning &amp; Tools</h1>
+            <p>
+                Use these curated guides and tools when you are ready to explore beyond the three
+                beginner modules. All links open in a new tab.
+            </p>
+        </section>
+
+        <!-- Resource categories keep the page scannable and aligned with research findings -->
+        <section class="resource-section" aria-labelledby="reading-heading">
+            <h2 id="reading-heading">Guides &amp; Articles</h2>
+            <ul class="resource-list">
+                <li>
+                    <a href="https://photographylife.com/photography-basics" target="_blank" rel="noopener">
+                        Photography Basics – Photography Life
+                    </a>
+                    <p class="resource-description">
+                        A comprehensive series of articles covering exposure, focus, composition,
+                        and more in depth.
+                    </p>
+                </li>
+                <li>
+                    <a href="https://www.australianphotographyschool.com.au/blog/photography-for-beginners-your-first-steps-into-creative-expression/" target="_blank" rel="noopener">
+                        Photography for Beginners – Australian Photography School
+                    </a>
+                    <p class="resource-description">
+                        An accessible beginner path that inspired the structure of this mini‑course.
+                    </p>
+                </li>
+                <li>
+                    <a href="https://greatbigphotographyworld.com/beginner-photography/" target="_blank" rel="noopener">
+                        Photography for Beginners – Great Big Photography World
+                    </a>
+                    <p class="resource-description">
+                        Free beginner course emphasizing practical exercises and clear explanations.
+                    </p>
+                </li>
+            </ul>
+        </section>
+
+        <section class="resource-section" aria-labelledby="tools-heading">
+            <h2 id="tools-heading">Planning &amp; Practice Tools</h2>
+            <ul class="resource-list">
+                <li>
+                    <a href="https://www.cambridgeincolour.com/tutorials/camera-exposure.htm" target="_blank" rel="noopener">
+                        Interactive Exposure Tutorials – Cambridge in Colour
+                    </a>
+                    <p class="resource-description">
+                        Visual tools that help you experiment with how aperture, shutter speed,
+                        and ISO affect an image.
+                    </p>
+                </li>
+                <li>
+                    <a href="https://photographycourse.net/photography-exposure-cheat-sheet/" target="_blank" rel="noopener">
+                        Exposure Cheat Sheets – PhotographyCourse.net
+                    </a>
+                    <p class="resource-description">
+                        Printable reference material you can keep on your phone or in your camera bag.
+                    </p>
+                </li>
+            </ul>
+        </section>
+
+        <section class="resource-section" aria-labelledby="accessibility-heading">
+            <h2 id="accessibility-heading">Accessibility &amp; Inclusive Design</h2>
+            <ul class="resource-list">
+                <li>
+                    <a href="https://www.w3.org/TR/WCAG21/" target="_blank" rel="noopener">
+                        Web Content Accessibility Guidelines (WCAG) 2.1 – W3C
+                    </a>
+                    <p class="resource-description">
+                        The standards that guided the semantic structure, keyboard navigation, and
+                        alt text in this project.
+                    </p>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2025 Basics of Digital Photography – Community Learning by Kisandu Ariyarathne.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

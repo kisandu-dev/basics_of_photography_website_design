@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basics of Digital Photography – Exposure</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Global background video layer: sits behind all content -->
+    <div class="bg-video" aria-hidden="true">
+        <video
+            class="bg-video__media"
+            src="C:\Users\sahin\Downloads\Web Design final website\media\background-2.mp4"  
+            autoplay
+            muted
+            loop
+            playsinline
+        ></video>
+    </div>
+
+    <header class="site-header">
+        <a class="skip-link" href="#main-content">Skip to main content</a>
+
+        <nav class="main-nav" aria-label="Main site navigation">
+            <a class="brand" href="index.html">Basics of Digital Photography</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="nav-dropdown">
+                    <button class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="true">
+                        Basics
+                    </button>
+                    <ul class="nav-dropdown-menu">
+                        <li><a href="basics-exposure.html" aria-current="page">Exposure</a></li>
+                        <li><a href="basics-focus.html">Focus</a></li>
+                        <li><a href="basics-composition.html">Composition</a></li>
+                    </ul>
+                </li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- Banner-like intro section frames the learning outcome clearly -->
+        <section class="module-hero" aria-labelledby="exposure-heading">
+            <div class="module-hero-inner">
+                <div>
+                    <p class="module-kicker">Module 01</p>
+                    <h1 id="exposure-heading">Exposure Basics: The Triangle in Practice</h1>
+                    <p class="module-intro">
+                        After this section you will be able to select simple aperture, shutter speed,
+                        and ISO combinations for everyday scenes and understand how they affect
+                        brightness and motion.
+                    </p>
+                </div>
+                <!-- Supporting illustration with explicit alt text -->
+                <div class="module-hero-media">
+                    <!--  IMAGE_PATH -->
+                    <img src="C:\Users\sahin\Downloads\Web Design final website\media\image11.jpg" alt="Illustration of the exposure triangle linking aperture, shutter speed, and ISO">
+                </div>
+            </div>
+        </section>
+
+        <!-- Table of contents to minimize scrolling and support quick revisits -->
+        <nav class="module-toc" aria-label="Exposure quick navigation">
+            <p class="module-toc-label">On this page</p>
+            <ul>
+                <li><a href="#triangle">Understanding the Exposure Triangle</a></li>
+                <li><a href="#aperture">Aperture: Depth of Field</a></li>
+                <li><a href="#shutter">Shutter Speed: Motion</a></li>
+                <li><a href="#iso">ISO: Sensitivity and Noise</a></li>
+                <li><a href="#try-it">Try it now: Three Quick Setups</a></li>
+                <li><a href="#video">Watch: Exposure Walkthrough</a></li>
+            </ul>
+        </nav>
+
+        <section class="module-content">
+            <!-- Core explanation section -->
+            <article id="triangle" class="content-block">
+                <header>
+                    <h2>Understanding the Exposure Triangle</h2>
+                </header>
+                <p>
+                    Exposure describes how bright or dark your photograph appears, and it is controlled
+                    by three connected settings: aperture, shutter speed, and ISO.
+                </p>
+                <p>
+                    You can think of these three settings as sides of a triangle: if you change one side,
+                    at least one other side must adjust to keep the overall brightness similar.
+                </p>
+                <ul>
+                    <li>Aperture controls how wide the lens opens and influences depth of field.</li>
+                    <li>Shutter speed controls how long the sensor is exposed and influences motion blur.</li>
+                    <li>ISO controls how sensitive the sensor is to light and influences digital noise.</li>
+                </ul>
+            </article>
+
+            <!-- Aperture block with image and practice tip -->
+            <article id="aperture" class="content-block content-two-column">
+                <div class="content-text">
+                    <h2>Aperture: Controlling Depth of Field</h2>
+                    <p>
+                        Aperture values are written as f-numbers (for example, f/1.8, f/4, f/11).
+                        Lower f-numbers mean a wider opening, which lets in more light and creates a
+                        shallow depth of field where the background becomes soft.
+                    </p>
+                    <p>
+                        Higher f-numbers mean a narrower opening, which lets in less light and creates a
+                        deeper depth of field where more of the scene appears sharp from front to back.
+                    </p>
+                    <p class="practice-callout">
+                        Try this: Photograph a friend at f/2.8 and then at f/11 (or the closest values
+                        your camera offers) and compare how the background changes.
+                    </p>
+                </div>
+                <div class="content-media">
+                    <!--  IMAGE_PATH -->
+                    <img src="C:\Users\sahin\Downloads\Web Design final website\media\image12.jpg" alt="Two portraits side by side, one with blurred background and one with sharp background">
+                </div>
+            </article>
+
+            <!-- Shutter speed block -->
+            <article id="shutter" class="content-block content-two-column content-reverse">
+                <div class="content-media">
+                    <!--  IMAGE_PATH -->
+                    <img src="C:\Users\sahin\Downloads\Web Design final website\media\image13.jpg" alt="Waterfall captured frozen with fast shutter speed and blurred with slow shutter speed">
+                </div>
+                <div class="content-text">
+                    <h2>Shutter Speed: Freezing or Blurring Motion</h2>
+                    <p>
+                        Shutter speed is measured in fractions of a second, such as 1/1000 s or 1/30 s.
+                        Fast shutter speeds freeze motion, which is useful for sports, wildlife, or active
+                        children.
+                    </p>
+                    <p>
+                        Slower shutter speeds allow more light in but make moving subjects blur, which
+                        you can use creatively for waterfalls, traffic trails, or intentional camera movement.
+                    </p>
+                    <p class="practice-callout">
+                        Try this: Photograph moving traffic at 1/500 s and again at 1/10 s while keeping
+                        the camera as steady as you can. Notice how motion feels different.
+                    </p>
+                </div>
+            </article>
+
+            <!-- ISO block -->
+            <article id="iso" class="content-block content-two-column">
+                <div class="content-text">
+                    <h2>ISO: Sensitivity and Digital Noise</h2>
+                    <p>
+                        ISO values typically start around ISO 100 and increase in steps (ISO 400, ISO 1600,
+                        and so on). Higher ISO allows you to shoot in low light but introduces visible grain
+                        or noise.
+                    </p>
+                    <p>
+                        A simple beginner rule is to keep ISO as low as possible while still maintaining
+                        a shutter speed that avoids unwanted blur.
+                    </p>
+                    <p class="practice-callout">
+                        Try this: Photograph the same indoor scene at ISO 100 and ISO 3200, then zoom in
+                        to compare how grainy the shadows look.
+                    </p>
+                </div>
+                <div class="content-media">
+                    <!--  IMAGE_PATH -->
+                    <img src="C:\Users\sahin\Downloads\Web Design final website\media\image14.jpg" alt="Side-by-side comparison of a low ISO clean image and a high ISO noisy image">
+                </div>
+            </article>
+
+            <!-- Practical checklist summarizing steps -->
+            <article id="try-it" class="content-block highlight-block">
+                <header>
+                    <h2>Try It Now: Three Simple Setups</h2>
+                </header>
+                <ol>
+                    <li>
+                        <strong>Bright outdoor portrait:</strong> Use aperture priority mode, choose
+                        f/2.8–f/4, and keep ISO at 100–200.
+                    </li>
+                    <li>
+                        <strong>Indoor still life:</strong> Use shutter priority mode at 1/60 s, let the
+                        camera pick aperture, and increase ISO until the preview looks bright enough.
+                    </li>
+                    <li>
+                        <strong>Creative motion blur:</strong> Use shutter priority at 1/10 s, brace
+                        your camera, and photograph moving water or traffic.
+                    </li>
+                </ol>
+            </article>
+
+            <!-- Embedded responsive YouTube video as requested -->
+            <article id="video" class="content-block">
+                <header>
+                    <h2>Watch: A Beginner’s Guide to Exposure</h2>
+                </header>
+                <p>
+                    Prefer to watch first? This short tutorial reinforces how aperture, shutter speed,
+                    and ISO work together.
+                </p>
+
+                <!-- Responsive iframe wrapper makes the video adapt to different screens -->
+                <div class="video-wrapper">
+                    <iframe
+                        src="https://www.youtube.com/embed/F8T94sdiNjc"
+                        title="YouTube video explaining the exposure triangle"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </article>
+        </section>
+
+        <!-- Inline call-to-action guiding learners to the next logical module -->
+        <section class="module-next-step">
+            <p>
+                Ready for the next step? Continue to
+                <a href="basics-focus.html">Focus &amp; Sharpness</a>
+                to make sure the right things stay sharp.
+            </p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2025 Basics of Digital Photography – Community Learning by Kisandu Ariyarathne.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
