@@ -1,17 +1,33 @@
+<!-- 
+	Author : YADDEHIGE Kisandu Kawsika Ariyarathne
+	Student ID : 10685969
+	Index.html 
+	Date : 06/02/2026
+	Time : 1350h
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Character encoding so all text renders correctly -->
     <meta charset="UTF-8">
+    <!-- Viewport for responsive layout on mobile devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Page title used by the browser and assistive technologies -->
     <title>Basics of Digital Photography – Contact</title>
+
+    <!-- Single external stylesheet for the whole site -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Favicon shown on the browser tab -->
+    <link rel="icon" type="image/png" href="media/tabicon.jpg">
 </head>
 <body>
-    <!-- Global background video layer: sits behind all content -->
+    <!-- Fixed background video behind all content.
+         aria-hidden hides it from screen readers because it is decorative only. -->
     <div class="bg-video" aria-hidden="true">
         <video
             class="bg-video__media"
-            src="media\background-3.mp4"
+            src="media/background-3.mp4"
             autoplay
             muted
             loop
@@ -19,31 +35,39 @@
         ></video>
     </div>
 
+    <!-- Site header and global navigation -->
     <header class="site-header">
+        <!-- Keyboard users can skip directly to the main content -->
         <a class="skip-link" href="#main-content">Skip to main content</a>
 
         <nav class="main-nav" aria-label="Main site navigation">
+            <!-- Text logo linking back to home -->
             <a class="brand" href="index.html">Basics of Digital Photography</a>
+
+            <!-- Global navigation list used on every page -->
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
+
+                <!-- Basics dropdown with links to the three learning modules -->
                 <li class="nav-dropdown">
-                    <button class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">
-                        Basics
-                    </button>
+                    <a href="basics-exposure.html">Basics</a>
                     <ul class="nav-dropdown-menu">
                         <li><a href="basics-exposure.html">Exposure</a></li>
                         <li><a href="basics-focus.html">Focus</a></li>
                         <li><a href="basics-composition.html">Composition</a></li>
                     </ul>
                 </li>
+
                 <li><a href="resources.html">Resources</a></li>
+                <!-- Contact is the current page -->
                 <li><a href="contact.html" aria-current="page">Contact</a></li>
             </ul>
         </nav>
     </header>
 
+    <!-- Main landmark containing the contact form and illustration -->
     <main id="main-content">
-        <!-- Layout mirrors your wireframe: explanatory text plus form and image -->
+        <!-- Page header that explains the purpose of this page -->
         <section class="page-header" aria-labelledby="contact-heading">
             <h1 id="contact-heading">Contact &amp; Feedback</h1>
             <p>
@@ -52,6 +76,7 @@
             </p>
         </section>
 
+        <!-- Two‑column layout: form on the left, supporting image on the right -->
         <section class="contact-layout">
             <!-- Accessible contact form with labeled fields and required attributes -->
             <form class="contact-form" action="#" method="post" aria-describedby="contact-heading">
@@ -87,23 +112,24 @@
 
                 <p class="contact-alt">
                     Prefer email? Write directly to
-                    <a href="mailto:hello@basicsofdigitalphotography.example">hello@basicsofdigitalphotography.example</a>.
+                    <a href="mailto:hello@basicsofdigitalphotography.example">
+                        hello@basicsofdigitalphotography.example
+                    </a>.
                 </p>
             </form>
 
-            <!-- Visual panel echoing the film-like theme -->
+            <!-- Visual panel echoing the film‑like theme -->
             <aside class="contact-aside" aria-label="Decorative photography illustration">
-                <!--  IMAGE_PATH -->
-                <img src="media\image17.jpg" alt="Person reviewing photos on a camera next to a notebook">
+                <!--  IMAGE_PATH: replace media/image17.jpg with your own file if needed -->
+                <img src="media/image17.jpg"
+                     alt="Person reviewing photos on a camera next to a notebook">
             </aside>
         </section>
     </main>
 
+    <!-- Shared footer with attribution -->
     <footer class="site-footer">
-        <p>&copy; 2025 Basics of Digital Photography – Community Learning by Kisandu Ariyarathne.</p>
+        <p>&copy; 2026 Basics of Digital Photography – Community Learning by Kisandu Ariyarathne.</p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
-
