@@ -1,3 +1,11 @@
+<!-- 
+	Author : YADDEHIGE Kisandu Kawsika Ariyarathne
+	Student ID : 10685969
+	Index.html 
+	Date : 06/02/2026
+	Time : 1350h
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,13 +17,15 @@
     <title>Basics of Digital Photography – Home</title>
     <!-- Single external stylesheet reference to satisfy “single external CSS” requirement -->
     <link rel="stylesheet" href="style.css">
+    <!-- Tab icon (favicon) -->
+    <link rel="icon" type="image/png" href="media/tabicon.jpg">
 </head>
 <body>
     <!-- Global background video layer: sits behind all content -->
     <div class="bg-video" aria-hidden="true">
         <video
             class="bg-video__media"
-            src="media\background.mp4"
+            src="media/background.mp4"
             autoplay
             muted
             loop
@@ -35,18 +45,20 @@
 
             <!-- Primary navigation list; links point to each HTML page in the mini-course -->
             <ul class="nav-links">
+                <!-- Home is the current page -->
                 <li><a href="index.html" aria-current="page">Home</a></li>
+
+                <!-- Basics dropdown: pure CSS, no JavaScript -->
                 <li class="nav-dropdown">
-                    <!-- Parent item that groups the three “Basics” modules -->
-                    <button class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">
-                        Basics
-                    </button>
+                    <!-- Parent link goes to the first module; submenu lists all three -->
+                    <a href="basics-exposure.html">Basics</a>
                     <ul class="nav-dropdown-menu">
                         <li><a href="basics-exposure.html">Exposure</a></li>
                         <li><a href="basics-focus.html">Focus</a></li>
                         <li><a href="basics-composition.html">Composition</a></li>
                     </ul>
                 </li>
+
                 <li><a href="resources.html">Resources</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
@@ -80,7 +92,7 @@
                 <!-- Hero supporting image; placeholder path plus comment marker for replacement -->
                 <div class="hero-media">
                     <!--  IMAGE_PATH -->
-                    <img src="media\image1.jpg" alt="Shooting a landscape at golden hour">
+                    <img src="media/image1.jpg" alt="Shooting a landscape at golden hour">
                 </div>
             </div>
         </section>
@@ -99,7 +111,7 @@
                 <!-- Exposure card -->
                 <article class="module-card">
                     <!--  IMAGE_PATH -->
-                    <img src="media\image8.jpg" alt="Diagram of the exposure triangle with aperture, shutter speed, and ISO">
+                    <img src="media/image8.jpg" alt="Diagram of the exposure triangle with aperture, shutter speed, and ISO">
                     <div class="module-card-body">
                         <h3>Exposure Basics</h3>
                         <p>
@@ -115,7 +127,7 @@
                 <!-- Focus card -->
                 <article class="module-card">
                     <!--  IMAGE_PATH -->
-                    <img src="media\image9.jpg" alt="Portrait showing sharp eyes against a soft background">
+                    <img src="media/image9.jpg" alt="Portrait showing sharp eyes against a soft background">
                     <div class="module-card-body">
                         <h3>Focus &amp; Sharpness</h3>
                         <p>
@@ -131,7 +143,7 @@
                 <!-- Composition card -->
                 <article class="module-card">
                     <!--  IMAGE_PATH -->
-                    <img src="media\image10.jpg" alt="Grid overlay showing the rule of thirds on a landscape image">
+                    <img src="media/image10.jpg" alt="Grid overlay showing the rule of thirds on a landscape image">
                     <div class="module-card-body">
                         <h3>Composition Fundamentals</h3>
                         <p>
@@ -206,14 +218,11 @@
 
     <!-- Footer landmark with secondary navigation and attribution -->
     <footer class="site-footer">
-        <p>&copy; 2025 Basics of Digital Photography – Community Learning by Kisandu Ariyarathne.</p>
+        <p>&copy; 2026 Basics of Digital Photography – Community Learning by Kisandu Ariyarathne.</p>
         <p>
             Built as an educational project focusing on usability, accessibility, and beginner‑friendly learning.
         </p>
     </footer>
-
-    <!-- External JavaScript for navigation and scroll micro-interactions -->
-    <script src="script.js"></script>
 </body>
 </html>
 
