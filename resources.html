@@ -1,17 +1,33 @@
+<!-- 
+	Author : YADDEHIGE Kisandu Kawsika Ariyarathne
+	Student ID : 10685969
+	resources.html 
+	Date : 06/02/2026
+	Time : 1350h
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Character encoding so all text renders correctly -->
     <meta charset="UTF-8">
+    <!-- Viewport for responsive layout on mobile devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Page title used by the browser and assistive technologies -->
     <title>Basics of Digital Photography – Resources</title>
+
+    <!-- Single external stylesheet for the whole site -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Favicon shown on the browser tab -->
+    <link rel="icon" type="image/png" href="media/tabicon.jpg">
 </head>
 <body>
-    <!-- Global background video layer: sits behind all content -->
+    <!-- Fixed background video behind all content.
+         aria-hidden hides it from screen readers because it is decorative only. -->
     <div class="bg-video" aria-hidden="true">
         <video
             class="bg-video__media"
-            src="media\background-3.mp4"  
+            src="media/background-3.mp4"
             autoplay
             muted
             loop
@@ -19,30 +35,39 @@
         ></video>
     </div>
 
+    <!-- Site header and global navigation -->
     <header class="site-header">
+        <!-- Keyboard users can skip directly to the main content -->
         <a class="skip-link" href="#main-content">Skip to main content</a>
 
         <nav class="main-nav" aria-label="Main site navigation">
+            <!-- Text logo linking back to home -->
             <a class="brand" href="index.html">Basics of Digital Photography</a>
+
+            <!-- Global navigation list used on every page -->
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
+
+                <!-- Basics dropdown with links to the three learning modules -->
                 <li class="nav-dropdown">
-                    <button class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">
-                        Basics
-                    </button>
+                    <a href="basics-exposure.html">Basics</a>
                     <ul class="nav-dropdown-menu">
                         <li><a href="basics-exposure.html">Exposure</a></li>
                         <li><a href="basics-focus.html">Focus</a></li>
                         <li><a href="basics-composition.html">Composition</a></li>
                     </ul>
                 </li>
+
+                <!-- Resources is the current page -->
                 <li><a href="resources.html" aria-current="page">Resources</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
+    <!-- Main landmark containing resource links organised into categories -->
     <main id="main-content">
+        <!-- Page header that explains the purpose of this section -->
         <section class="page-header" aria-labelledby="resources-heading">
             <h1 id="resources-heading">Further Learning &amp; Tools</h1>
             <p>
@@ -122,11 +147,9 @@
         </section>
     </main>
 
+    <!-- Shared footer with attribution -->
     <footer class="site-footer">
-        <p>&copy; 2025 Basics of Digital Photography – Community Learning by Kisandu Ariyarathne.</p>
+        <p>&copy; 2026 Basics of Digital Photography – Community Learning by Kisandu Ariyarathne.</p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
-
