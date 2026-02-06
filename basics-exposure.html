@@ -1,17 +1,34 @@
+<!-- 
+	Author : YADDEHIGE Kisandu Kawsika Ariyarathne
+	Student ID : 10685969
+	basic-exposure.html
+	Date : 06/02/2026
+	Time : 1350h
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Character encoding so all text renders correctly -->
     <meta charset="UTF-8">
+    <!-- Viewport for responsive behaviour on phones and tablets -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Page title shown in browser tab and assistive tech -->
     <title>Basics of Digital Photography – Exposure</title>
+
+    <!-- Single external stylesheet for all pages (assignment requirement) -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Favicon shown in the browser tab -->
+    <link rel="icon" type="image/png" href="media/tabicon.jpg">
 </head>
 <body>
-    <!-- Global background video layer: sits behind all content -->
+    <!-- Fixed background video that sits behind all visible content.
+         aria-hidden hides it from screen readers because it is purely decorative. -->
     <div class="bg-video" aria-hidden="true">
         <video
             class="bg-video__media"
-            src="media\background-2.mp4"  
+            src="media/background-2.mp4"
             autoplay
             muted
             loop
@@ -19,51 +36,71 @@
         ></video>
     </div>
 
+    <!-- Site header with global navigation.
+         The skip link is placed inside the header so keyboard users can jump directly to <main>. -->
     <header class="site-header">
+        <!-- Skip link to improve keyboard accessibility (WCAG requirement). -->
         <a class="skip-link" href="#main-content">Skip to main content</a>
 
+        <!-- Primary navigation bar -->
         <nav class="main-nav" aria-label="Main site navigation">
+            <!-- Text logo linking back to the home page -->
             <a class="brand" href="index.html">Basics of Digital Photography</a>
+
+            <!-- Global navigation list used on every page for consistency -->
             <ul class="nav-links">
+                <!-- Home link (not current page here) -->
                 <li><a href="index.html">Home</a></li>
+
+                <!-- Basics dropdown: accessible hover/focus menu, no JavaScript required -->
                 <li class="nav-dropdown">
-                    <button class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="true">
-                        Basics
-                    </button>
+                    <!-- Parent link goes to the first module; submenu holds all three topics -->
+                    <a href="basics-exposure.html" aria-current="page">Basics</a>
                     <ul class="nav-dropdown-menu">
                         <li><a href="basics-exposure.html" aria-current="page">Exposure</a></li>
                         <li><a href="basics-focus.html">Focus</a></li>
                         <li><a href="basics-composition.html">Composition</a></li>
                     </ul>
                 </li>
+
+                <!-- Other global sections -->
                 <li><a href="resources.html">Resources</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
+    <!-- Main landmark so assistive technologies can jump straight to page content -->
     <main id="main-content">
-        <!-- Banner-like intro section frames the learning outcome clearly -->
+        <!-- Hero-style introduction for this module. It states the learning outcome clearly. -->
         <section class="module-hero" aria-labelledby="exposure-heading">
             <div class="module-hero-inner">
                 <div>
+                    <!-- Small label giving users context in the three‑module pathway -->
                     <p class="module-kicker">Module 01</p>
+
+                    <!-- Main heading for this page -->
                     <h1 id="exposure-heading">Exposure Basics: The Triangle in Practice</h1>
+
+                    <!-- Learning outcome phrased in student‑friendly language -->
                     <p class="module-intro">
                         After this section you will be able to select simple aperture, shutter speed,
                         and ISO combinations for everyday scenes and understand how they affect
                         brightness and motion.
                     </p>
                 </div>
-                <!-- Supporting illustration with explicit alt text -->
+
+                <!-- Supporting image illustrating the concept of the exposure triangle -->
                 <div class="module-hero-media">
-                    <!--  IMAGE_PATH -->
-                    <img src="media\image11.jpg" alt="Illustration of the exposure triangle linking aperture, shutter speed, and ISO">
+                    <!--  IMAGE_PATH: replace media/image11.jpg with your own file if needed -->
+                    <img src="media/image11.jpg"
+                         alt="Illustration of the exposure triangle linking aperture, shutter speed, and ISO">
                 </div>
             </div>
         </section>
 
-        <!-- Table of contents to minimize scrolling and support quick revisits -->
+        <!-- In‑page table of contents.
+             This allows learners to jump directly to a specific topic when revisiting the page. -->
         <nav class="module-toc" aria-label="Exposure quick navigation">
             <p class="module-toc-label">On this page</p>
             <ul>
@@ -76,11 +113,15 @@
             </ul>
         </nav>
 
-        <section class="module-content">
-            <!-- Core explanation section -->
+        <!-- Main instructional content area for this module.
+             Hidden heading keeps the section valid and accessible without visual clutter. -->
+        <section class="module-content" aria-labelledby="content-heading">
+            <h2 id="content-heading" class="visually-hidden">Exposure module content</h2>
+
+            <!-- 1. Conceptual overview of the exposure triangle -->
             <article id="triangle" class="content-block">
                 <header>
-                    <h2>Understanding the Exposure Triangle</h2>
+                    <h3>Understanding the Exposure Triangle</h3>
                 </header>
                 <p>
                     Exposure describes how bright or dark your photograph appears, and it is controlled
@@ -97,10 +138,10 @@
                 </ul>
             </article>
 
-            <!-- Aperture block with image and practice tip -->
+            <!-- 2. Aperture explanation + practice -->
             <article id="aperture" class="content-block content-two-column">
                 <div class="content-text">
-                    <h2>Aperture: Controlling Depth of Field</h2>
+                    <h3>Aperture: Controlling Depth of Field</h3>
                     <p>
                         Aperture values are written as f-numbers (for example, f/1.8, f/4, f/11).
                         Lower f-numbers mean a wider opening, which lets in more light and creates a
@@ -110,25 +151,32 @@
                         Higher f-numbers mean a narrower opening, which lets in less light and creates a
                         deeper depth of field where more of the scene appears sharp from front to back.
                     </p>
+                    <!-- Short “try it now” exercise to encourage immediate practice -->
                     <p class="practice-callout">
                         Try this: Photograph a friend at f/2.8 and then at f/11 (or the closest values
                         your camera offers) and compare how the background changes.
                     </p>
                 </div>
+
+                <!-- Example image comparing shallow and deep depth of field -->
                 <div class="content-media">
                     <!--  IMAGE_PATH -->
-                    <img src="media\image12.jpg" alt="Two portraits side by side, one with blurred background and one with sharp background">
+                    <img src="media/image12.jpg"
+                         alt="Two portraits side by side, one with blurred background and one with sharp background">
                 </div>
             </article>
 
-            <!-- Shutter speed block -->
+            <!-- 3. Shutter speed explanation + practice -->
             <article id="shutter" class="content-block content-two-column content-reverse">
+                <!-- Image first on larger screens for visual variety -->
                 <div class="content-media">
                     <!--  IMAGE_PATH -->
-                    <img src="media\image13.jpg" alt="Waterfall captured frozen with fast shutter speed and blurred with slow shutter speed">
+                    <img src="media/image13.jpg"
+                         alt="Waterfall captured frozen with fast shutter speed and blurred with slow shutter speed">
                 </div>
+
                 <div class="content-text">
-                    <h2>Shutter Speed: Freezing or Blurring Motion</h2>
+                    <h3>Shutter Speed: Freezing or Blurring Motion</h3>
                     <p>
                         Shutter speed is measured in fractions of a second, such as 1/1000 s or 1/30 s.
                         Fast shutter speeds freeze motion, which is useful for sports, wildlife, or active
@@ -145,10 +193,10 @@
                 </div>
             </article>
 
-            <!-- ISO block -->
+            <!-- 4. ISO explanation + practice -->
             <article id="iso" class="content-block content-two-column">
                 <div class="content-text">
-                    <h2>ISO: Sensitivity and Digital Noise</h2>
+                    <h3>ISO: Sensitivity and Digital Noise</h3>
                     <p>
                         ISO values typically start around ISO 100 and increase in steps (ISO 400, ISO 1600,
                         and so on). Higher ISO allows you to shoot in low light but introduces visible grain
@@ -163,16 +211,19 @@
                         to compare how grainy the shadows look.
                     </p>
                 </div>
+
+                <!-- Example image comparing clean vs noisy high‑ISO frame -->
                 <div class="content-media">
                     <!--  IMAGE_PATH -->
-                    <img src="media\image14.jpg" alt="Side-by-side comparison of a low ISO clean image and a high ISO noisy image">
+                    <img src="media/image14.jpg"
+                         alt="Side-by-side comparison of a low ISO clean image and a high ISO noisy image">
                 </div>
             </article>
 
-            <!-- Practical checklist summarizing steps -->
+            <!-- 5. Checklist with three simple starting setups -->
             <article id="try-it" class="content-block highlight-block">
                 <header>
-                    <h2>Try It Now: Three Simple Setups</h2>
+                    <h3>Try It Now: Three Simple Setups</h3>
                 </header>
                 <ol>
                     <li>
@@ -190,22 +241,22 @@
                 </ol>
             </article>
 
-            <!-- Embedded responsive YouTube video as requested -->
+            <!-- 6. Embedded video for learners who prefer audiovisual content -->
             <article id="video" class="content-block">
                 <header>
-                    <h2>Watch: A Beginner’s Guide to Exposure</h2>
+                    <h3>Watch: A Beginner’s Guide to Exposure</h3>
                 </header>
                 <p>
                     Prefer to watch first? This short tutorial reinforces how aperture, shutter speed,
                     and ISO work together.
                 </p>
 
-                <!-- Responsive iframe wrapper makes the video adapt to different screens -->
+                <!-- Responsive 16:9 wrapper so the YouTube iframe scales on all screens -->
                 <div class="video-wrapper">
                     <iframe
                         src="https://www.youtube.com/embed/F8T94sdiNjc"
                         title="YouTube video explaining the exposure triangle"
-                        frameborder="0"
+                        style="border: 0;"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen>
                     </iframe>
@@ -213,8 +264,10 @@
             </article>
         </section>
 
-        <!-- Inline call-to-action guiding learners to the next logical module -->
-        <section class="module-next-step">
+        <!-- Simple call-to-action pointing learners to the next module in the pathway.
+             Hidden heading keeps the section accessible without adding a visible title. -->
+        <section class="module-next-step" aria-labelledby="next-step-heading">
+            <h2 id="next-step-heading" class="visually-hidden">Next module</h2>
             <p>
                 Ready for the next step? Continue to
                 <a href="basics-focus.html">Focus &amp; Sharpness</a>
@@ -223,11 +276,9 @@
         </section>
     </main>
 
+    <!-- Global footer with attribution text -->
     <footer class="site-footer">
-        <p>&copy; 2025 Basics of Digital Photography – Community Learning by Kisandu Ariyarathne.</p>
+        <p>&copy; 2026 Basics of Digital Photography – Community Learning by Kisandu Ariyarathne.</p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
-
