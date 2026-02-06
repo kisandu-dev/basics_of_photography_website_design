@@ -4,8 +4,8 @@ A compact, self‑paced mini‑course website that teaches beginners the fundame
 
 ## Live Demo
 
-<!-- Replace with your GitHub Pages or hosting URL -->
-https://your-username.github.io/digital-photography-basics/
+
+https://basics-of-photography-website-desig.vercel.app/
 
 ## Project Structure
 
