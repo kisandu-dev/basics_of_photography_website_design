@@ -1,17 +1,33 @@
+<!-- 
+	Author : YADDEHIGE Kisandu Kawsika Ariyarathne
+	Student ID : 10685969
+	basic-composition.html 
+	Date : 06/02/2026
+	Time : 1350h
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Character encoding so all text renders correctly -->
     <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Viewport for responsive layout on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Page title used by the browser and assistive technologies -->
     <title>Basics of Digital Photography – Composition</title>
+
+    <!-- Single external stylesheet for the whole site -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Favicon shown on the browser tab -->
+    <link rel="icon" type="image/png" href="media/tabicon.jpg">
 </head>
 <body>
-    <!-- Global background video layer: sits behind all content -->
+    <!-- Fixed background video behind all content.
+         aria-hidden hides it from screen readers because it is decorative only. -->
     <div class="bg-video" aria-hidden="true">
         <video
             class="bg-video__media"
-            src="media\background-2.mp4"  
+            src="media/background-2.mp4"
             autoplay
             muted
             loop
@@ -19,30 +35,38 @@
         ></video>
     </div>
 
+    <!-- Site header and global navigation -->
     <header class="site-header">
+        <!-- Keyboard users can skip directly to the main content -->
         <a class="skip-link" href="#main-content">Skip to main content</a>
 
         <nav class="main-nav" aria-label="Main site navigation">
+            <!-- Text logo linking back to home -->
             <a class="brand" href="index.html">Basics of Digital Photography</a>
+
+            <!-- Global navigation list used on every page -->
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
+
+                <!-- Basics dropdown using the same pure‑CSS pattern as other modules -->
                 <li class="nav-dropdown">
-                    <button class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="true">
-                        Basics
-                    </button>
+                    <a href="basics-exposure.html">Basics</a>
                     <ul class="nav-dropdown-menu">
                         <li><a href="basics-exposure.html">Exposure</a></li>
                         <li><a href="basics-focus.html">Focus</a></li>
                         <li><a href="basics-composition.html" aria-current="page">Composition</a></li>
                     </ul>
                 </li>
+
                 <li><a href="resources.html">Resources</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
+    <!-- Main landmark with the content of the Composition module -->
     <main id="main-content">
+        <!-- Hero block stating the learning outcome for this module -->
         <section class="module-hero" aria-labelledby="composition-heading">
             <div class="module-hero-inner">
                 <div>
@@ -53,13 +77,17 @@
                         to place subjects intentionally and create a clearer visual story.
                     </p>
                 </div>
+
+                <!-- Supporting image showing a composition grid on a landscape -->
                 <div class="module-hero-media">
-                    <!--  IMAGE_PATH -->
-                    <img src="media\image2.jpeg" alt="Landscape photograph with a grid overlay illustrating composition">
+                    <!--  IMAGE_PATH: replace media/image2.jpeg with your own file if needed -->
+                    <img src="media/image2.jpeg"
+                         alt="Landscape photograph with a grid overlay illustrating composition">
                 </div>
             </div>
         </section>
 
+        <!-- In‑page table of contents so learners can jump between topics -->
         <nav class="module-toc" aria-label="Composition quick navigation">
             <p class="module-toc-label">On this page</p>
             <ul>
@@ -71,10 +99,17 @@
             </ul>
         </nav>
 
-        <section class="module-content">
+        <!-- Main teaching content for the Composition module -->
+        <section class="module-content" aria-labelledby="composition-content-heading">
+            <!-- Hidden heading keeps the section valid and screen‑reader friendly -->
+            <h2 id="composition-content-heading" class="visually-hidden">
+                Composition fundamentals module content
+            </h2>
+
+            <!-- 1. Why composition matters -->
             <article id="why-composition" class="content-block">
                 <header>
-                    <h2>Why Composition Matters</h2>
+                    <h3>Why Composition Matters</h3>
                 </header>
                 <p>
                     Composition is about where you place elements within the frame and how they
@@ -88,9 +123,10 @@
                 </p>
             </article>
 
+            <!-- 2. Rule of thirds explanation + practice -->
             <article id="rule-of-thirds" class="content-block content-two-column">
                 <div class="content-text">
-                    <h2>The Rule of Thirds</h2>
+                    <h3>The Rule of Thirds</h3>
                     <p>
                         Imagine your frame divided into a 3×3 grid. The rule of thirds suggests placing
                         important elements along those lines or at their intersections rather than
@@ -105,19 +141,26 @@
                         horizon on the top or bottom third rather than in the middle.
                     </p>
                 </div>
+
+                <!-- Example image showing subject on a grid intersection -->
                 <div class="content-media">
                     <!--  IMAGE_PATH -->
-                    <img src="media\image15.jpg" alt="Photo with a 3x3 grid overlay and the subject placed on an intersection point">
+                    <img src="media/image15.jpg"
+                         alt="Photo with a 3x3 grid overlay and the subject placed on an intersection point">
                 </div>
             </article>
 
+            <!-- 3. Leading lines explanation + practice -->
             <article id="leading-lines" class="content-block content-two-column content-reverse">
+                <!-- Lines leading to the subject -->
                 <div class="content-media">
                     <!--  IMAGE_PATH -->
-                    <img src="media\image16.jpg" alt="Road and fence lines leading the viewer's eye toward a distant mountain">
+                    <img src="media/image16.jpg"
+                         alt="Road and fence lines leading the viewer's eye toward a distant mountain">
                 </div>
+
                 <div class="content-text">
-                    <h2>Leading Lines</h2>
+                    <h3>Leading Lines</h3>
                     <p>
                         Leading lines are real or implied lines that guide the viewer’s eye through the
                         image, such as roads, fences, shorelines, or beams of light.
@@ -133,9 +176,10 @@
                 </div>
             </article>
 
+            <!-- 4. Practical exercise: reframing a scene -->
             <article id="try-it-composition" class="content-block highlight-block">
                 <header>
-                    <h2>Try It Now: Reframing a Scene</h2>
+                    <h3>Try It Now: Reframing a Scene</h3>
                 </header>
                 <ol>
                     <li>
@@ -149,9 +193,10 @@
                 </ol>
             </article>
 
+            <!-- 5. Embedded video showing composition ideas in action -->
             <article id="video-composition" class="content-block">
                 <header>
-                    <h2>Watch: Composition in Practice</h2>
+                    <h3>Watch: Composition in Practice</h3>
                 </header>
                 <p>
                     In this video, notice how the photographer uses simple compositional ideas like
@@ -162,7 +207,7 @@
                     <iframe
                         src="https://www.youtube.com/embed/OtF-NZc3Mto"
                         title="YouTube video demonstrating basic composition techniques"
-                        frameborder="0"
+                        style="border: 0;"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen>
                     </iframe>
@@ -170,7 +215,9 @@
             </article>
         </section>
 
-        <section class="module-next-step">
+        <!-- Closing call-to-action pointing to revision and resources -->
+        <section class="module-next-step" aria-labelledby="composition-next-heading">
+            <h2 id="composition-next-heading" class="visually-hidden">Next steps</h2>
             <p>
                 You have completed the three core modules. Revisit
                 <a href="basics-exposure.html">Exposure</a>,
@@ -180,11 +227,9 @@
         </section>
     </main>
 
+    <!-- Shared footer with attribution -->
     <footer class="site-footer">
-        <p>&copy; 2025 Basics of Digital Photography – Community Learning by Kisandu Ariyarathne.</p>
+        <p>&copy; 2026 Basics of Digital Photography – Community Learning by Kisandu Ariyarathne.</p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
-
