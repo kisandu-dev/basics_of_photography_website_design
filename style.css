@@ -1,3 +1,11 @@
+/* 
+	Author : YADDEHIGE Kisandu Kawsika Ariyarathne
+	Student ID : 10685969
+	style.css 
+	Date : 06/02/2026
+	Time : 1350h
+*/
+
 /* ==========================================================================
    Global design tokens – richer luxury palette inspired by resort sites
    ========================================================================== */
@@ -84,6 +92,19 @@ h4 {
     font-family: var(--font-heading);
     letter-spacing: 0.03em;
     margin-top: 0;
+}
+
+/* Visually hidden helper for accessible-only headings */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }
 
 /* ==========================================================================
@@ -181,53 +202,48 @@ main {
     color: var(--color-accent-soft);
 }
 
+/* Basics dropdown – pure CSS, no JS */
+
 .nav-dropdown {
     position: relative;
 }
 
-.nav-dropdown-toggle {
-    background: transparent;
-    border: none;
+/* Basics top link */
+.nav-dropdown > a {
+    font-size: 0.9rem;
     color: var(--color-text-muted);
-    font: inherit;
-    cursor: pointer;
     padding-bottom: 0.25rem;
     border-bottom: 2px solid transparent;
     text-transform: uppercase;
     letter-spacing: 0.12em;
 }
 
-.nav-dropdown-toggle:hover,
-.nav-dropdown-toggle:focus-visible {
+.nav-dropdown > a:hover,
+.nav-dropdown > a:focus-visible {
     color: var(--color-accent-soft);
 }
 
+/* Submenu */
 .nav-dropdown-menu {
     position: absolute;
-    right: 0;
-    top: 2.3rem;
+    top: 100%;
+    left: 0;
     min-width: 11rem;
     list-style: none;
-    margin: 0;
+    margin: 0.35rem 0 0;
     padding: 0.35rem 0;
     background: radial-gradient(circle at top, #1d2336 0, #090b15 60%);
     border-radius: var(--radius-sm);
     border: 1px solid rgba(255, 255, 255, 0.06);
     box-shadow: 0 22px 55px rgba(0, 0, 0, 0.85);
     display: none;
-    opacity: 0;
-    transform: translateY(8px);
-    transition:
-        opacity 190ms ease-out,
-        transform 190ms ease-out;
+    z-index: 50;
 }
 
-/* CSS hover + JS open state */
+/* Show submenu on hover or keyboard focus */
 .nav-dropdown:hover .nav-dropdown-menu,
-.nav-dropdown-menu.nav-dropdown-menu--open {
+.nav-dropdown:focus-within .nav-dropdown-menu {
     display: block;
-    opacity: 1;
-    transform: translateY(0);
 }
 
 .nav-dropdown-menu li a {
@@ -272,7 +288,6 @@ body::before {
     position: fixed;
     inset: 0;
     z-index: -1;
-    /* lighter overlay: lower alpha values so the video is more visible */
     background:
         radial-gradient(circle at top, rgba(24, 30, 56, 0.45) 0, rgba(3, 4, 10, 0.72) 55%, rgba(0, 0, 0, 0.85) 100%);
     pointer-events: none;
@@ -894,45 +909,6 @@ textarea {
 }
 
 /* ==========================================================================
-   Scroll-to-top button for script.js
-   ========================================================================== */
-
-.scroll-top-btn {
-    position: fixed;
-    right: 1.3rem;
-    bottom: 1.3rem;
-    padding: 0.55rem 0.9rem;
-    border-radius: var(--radius-pill);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    background: radial-gradient(circle at top, #262a46 0, #101321 60%);
-    color: var(--color-text-muted);
-    font-size: 0.85rem;
-    cursor: pointer;
-    opacity: 0;
-    transform: translateY(14px);
-    pointer-events: none;
-    transition:
-        opacity 220ms ease-out,
-        transform 220ms ease-out,
-        background 180ms ease-out,
-        box-shadow 200ms ease-out;
-    z-index: 90;
-}
-
-.scroll-top-btn--visible {
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto;
-}
-
-.scroll-top-btn:hover,
-.scroll-top-btn:focus-visible {
-    background: radial-gradient(circle at top, #323760 0, #181b29 60%);
-    color: var(--color-accent-soft);
-    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.95);
-}
-
-/* ==========================================================================
    Responsive tweaks
    ========================================================================== */
 
@@ -975,3 +951,4 @@ textarea {
         font-size: 2.1rem;
     }
 }
+
