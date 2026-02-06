@@ -1,17 +1,33 @@
+<!-- 
+	Author : YADDEHIGE Kisandu Kawsika Ariyarathne
+	Student ID : 10685969
+	basic-focus.html 
+	Date : 06/02/2026
+	Time : 1350h
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Character encoding so all text renders correctly -->
     <meta charset="UTF-8">
+    <!-- Viewport for responsive layout on mobile devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Page title used by the browser and assistive technologies -->
     <title>Basics of Digital Photography – Focus &amp; Sharpness</title>
+
+    <!-- Single external stylesheet for the whole site -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Favicon shown on the browser tab -->
+    <link rel="icon" type="image/png" href="media/tabicon.jpg">
 </head>
 <body>
-    <!-- Global background video layer: sits behind all content -->
+    <!-- Fixed background video behind all content.
+         aria-hidden hides it from screen readers because it is decorative only. -->
     <div class="bg-video" aria-hidden="true">
         <video
             class="bg-video__media"
-            src="media\background-2.mp4"
+            src="media/background-2.mp4"
             autoplay
             muted
             loop
@@ -19,30 +35,39 @@
         ></video>
     </div>
 
+    <!-- Site header and global navigation -->
     <header class="site-header">
+        <!-- Keyboard users can skip straight to the main content -->
         <a class="skip-link" href="#main-content">Skip to main content</a>
 
         <nav class="main-nav" aria-label="Main site navigation">
+            <!-- Text logo linking back to home -->
             <a class="brand" href="index.html">Basics of Digital Photography</a>
+
+            <!-- Global navigation list used on every page -->
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
+
+                <!-- Basics dropdown using the same pure‑CSS pattern as on the Exposure page -->
                 <li class="nav-dropdown">
-                    <button class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="true">
-                        Basics
-                    </button>
+                    <!-- Parent link goes to the first module; this page is the current Basics subsection -->
+                    <a href="basics-exposure.html">Basics</a>
                     <ul class="nav-dropdown-menu">
                         <li><a href="basics-exposure.html">Exposure</a></li>
                         <li><a href="basics-focus.html" aria-current="page">Focus</a></li>
                         <li><a href="basics-composition.html">Composition</a></li>
                     </ul>
                 </li>
+
                 <li><a href="resources.html">Resources</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
+    <!-- Main landmark for the focus module content -->
     <main id="main-content">
+        <!-- Hero-style intro that states the learning outcome for this module -->
         <section class="module-hero" aria-labelledby="focus-heading">
             <div class="module-hero-inner">
                 <div>
@@ -53,13 +78,17 @@
                         focus points, and apply simple techniques to reduce camera shake and blur.
                     </p>
                 </div>
+
+                <!-- Supporting image showing the focus point on the eye -->
                 <div class="module-hero-media">
-                    <!--  IMAGE_PATH -->
-                    <img src="media\image3.jpeg" alt="Close-up of a camera focusing on a subject's eye">
+                    <!--  IMAGE_PATH: replace media/image3.jpeg with your own image if needed -->
+                    <img src="media/image3.jpeg"
+                         alt="Close-up of a camera focusing on a subject's eye">
                 </div>
             </div>
         </section>
 
+        <!-- In‑page table of contents for quick jumping within this module -->
         <nav class="module-toc" aria-label="Focus quick navigation">
             <p class="module-toc-label">On this page</p>
             <ul>
@@ -71,16 +100,21 @@
             </ul>
         </nav>
 
-        <section class="module-content">
+        <!-- Main teaching content for the Focus module -->
+        <section class="module-content" aria-labelledby="focus-content-heading">
+            <!-- Hidden heading keeps the section valid and screen‑reader friendly -->
+            <h2 id="focus-content-heading" class="visually-hidden">Focus and sharpness module content</h2>
+
+            <!-- 1. Autofocus modes explanation -->
             <article id="af-modes" class="content-block content-two-column">
                 <div class="content-text">
-                    <h2>Autofocus Modes</h2>
+                    <h3>Autofocus Modes</h3>
                     <p>
                         Most cameras and phones offer at least two primary autofocus modes:
                         single-shot focus for still subjects and continuous focus for moving subjects.
                     </p>
                     <p>
-                        Single-shot focus locks focus once you half-press the shutter or tap the screen,
+                        Single-shot focus locks focus once you half‑press the shutter or tap the screen,
                         making it ideal for portraits, landscapes, or still life scenes.
                     </p>
                     <p>
@@ -88,19 +122,26 @@
                         kids running, pets, or sports.
                     </p>
                 </div>
+
+                <!-- Illustration of an autofocus mode menu on the camera -->
                 <div class="content-media">
                     <!--  IMAGE_PATH -->
-                    <img src="media\image4.jpg" alt="Camera back screen showing autofocus mode selection">
+                    <img src="media/image4.jpg"
+                         alt="Camera back screen showing autofocus mode selection">
                 </div>
             </article>
 
+            <!-- 2. Focus areas and points explanation -->
             <article id="focus-areas" class="content-block content-two-column content-reverse">
+                <!-- Image first on desktop for variation -->
                 <div class="content-media">
                     <!--  IMAGE_PATH -->
-                    <img src="media\image5.jpg" alt="Viewfinder overlay with multiple focus points, one highlighted over the subject's eye">
+                    <img src="media/image5.jpg"
+                         alt="Viewfinder overlay with multiple focus points, one highlighted over the subject's eye">
                 </div>
+
                 <div class="content-text">
-                    <h2>Focus Areas &amp; Focus Points</h2>
+                    <h3>Focus Areas &amp; Focus Points</h3>
                     <p>
                         Focus area settings decide how many focus points the camera uses when it
                         chooses what to focus on.
@@ -120,9 +161,10 @@
                 </div>
             </article>
 
+            <!-- 3. Avoiding camera shake -->
             <article id="camera-shake" class="content-block content-two-column">
                 <div class="content-text">
-                    <h2>Avoiding Camera Shake</h2>
+                    <h3>Avoiding Camera Shake</h3>
                     <p>
                         Even perfect focus settings will not look sharp if the camera moves during the
                         exposure, especially in low light.
@@ -136,15 +178,19 @@
                         tabletop or tripod to stabilize the camera.
                     </p>
                 </div>
+
+                <!-- Comparison image showing shake vs sharp result -->
                 <div class="content-media">
                     <!--  IMAGE_PATH -->
-                    <img src="media\image6.jpg" alt="Side-by-side comparison of a sharp photo and a blurred photo caused by camera shake">
+                    <img src="media/image6.jpg"
+                         alt="Side-by-side comparison of a sharp photo and a blurred photo caused by camera shake">
                 </div>
             </article>
 
+            <!-- 4. Practice prompts: portrait and action -->
             <article id="try-it-focus" class="content-block highlight-block">
                 <header>
-                    <h2>Try It Now: Portrait &amp; Action</h2>
+                    <h3>Try It Now: Portrait &amp; Action</h3>
                 </header>
                 <ol>
                     <li>
@@ -160,9 +206,10 @@
                 </ol>
             </article>
 
+            <!-- 5. Embedded video with extra tips -->
             <article id="video-focus" class="content-block">
                 <header>
-                    <h2>Watch: Focus &amp; Sharpness Tips</h2>
+                    <h3>Watch: Focus &amp; Sharpness Tips</h3>
                 </header>
                 <p>
                     This video reinforces how autofocus modes, focus areas, and stability work
@@ -173,7 +220,7 @@
                     <iframe
                         src="https://www.youtube.com/embed/i1qPdPGlWcQ"
                         title="YouTube video with tips for sharp photos and autofocus settings"
-                        frameborder="0"
+                        style="border: 0;"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen>
                     </iframe>
@@ -181,7 +228,9 @@
             </article>
         </section>
 
-        <section class="module-next-step">
+        <!-- Call-to-action taking users to the final Composition module -->
+        <section class="module-next-step" aria-labelledby="focus-next-heading">
+            <h2 id="focus-next-heading" class="visually-hidden">Next module</h2>
             <p>
                 Once you are happy with focus, continue to
                 <a href="basics-composition.html">Composition Fundamentals</a>
@@ -190,11 +239,9 @@
         </section>
     </main>
 
+    <!-- Footer used across all pages for attribution -->
     <footer class="site-footer">
-        <p>&copy; 2025 Basics of Digital Photography – Community Learning by Kisandu Ariyarathne.</p>
+        <p>&copy; 2026 Basics of Digital Photography – Community Learning by Kisandu Ariyarathne.</p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
-
